@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+<body>
+
+<!-- create navigation bar ( header) -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/adminLogin}">Admin System Home</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<br>
+<br>
+
+<div class="container">
+    <h1>Admin Appointment System</h1>
+    <br>
+    Welcome <span sec:authentication="principal.username"> User </span>
+
+</div>
+
+<td><a class="btn btn-info" href="#" th:href="@{/users}" >List Users</a></td>
+<td><a class="btn btn-info" href="#" th:href="@{/appointments}" >List Appointments</a></td>
+<td><a class="btn btn-info" href="#" th:href="@{/customerLogin}">Go to Customer System</a></td>
+
+
+
+
+
+</body>
+
+</html>

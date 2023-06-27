@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="col-md-8 col-sm-11 mx-auto my-5">
+    <h2>Users List</h2>
+    <td><a th:href="@{/adminLogin}" class="btn btn-info">Back to Admin Home</a></td>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Appointment ID</th>
+            <th scope="col">Status:Taken</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Patient</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="appointments: ${appointments}">
+            <td th:text="${appointments.id}">user id</td>
+            <td th:text="${appointments.appStatusTaken}">email</td>
+            <td th:text="${appointments.appDoctor.id}">user id</td>
+            <td th:text="${appointments.patient.id}">user id</td>
+            <td><a th:href="@{/deleteAppointment(appoID=${appointments.id})}" class="btn btn-danger ml-2">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+</body>
+</html>
