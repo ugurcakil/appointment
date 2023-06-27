@@ -1,7 +1,7 @@
 # appintment system
 this is a web-based appointment system application for users which has differnt roles such as admin,doctor,patient etc.
 
-it is a java spring project in backend. and used thymelef for frontend. and used mysql for database.
+used java spring for backend, thymeleaf for frontend, mysql for database.
 
 it is not a finished project. i was working on it during my internship.
 
