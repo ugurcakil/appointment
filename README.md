@@ -1,4 +1,4 @@
-# appintment system
+# appointment system
 this is a web-based appointment system application for users which has differnt roles such as admin,doctor,patient etc.
 
 used java spring for backend, thymeleaf for frontend, mysql for database.
