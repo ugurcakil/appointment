@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <ServerVersion>8.0.30</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="calendlydenemedb"/>
+    <schema id="3" parent="1" name="calendlydenemeolddb"/>
+    <schema id="4" parent="1" name="calendlylogin"/>
+    <schema id="5" parent="1" name="dbregister"/>
+    <schema id="6" parent="1" name="demodb"/>
+    <schema id="7" parent="1" name="denemelogindb"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="newcalenderappdb"/>
+    <schema id="11" parent="1" name="newregisterdb"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="sakila"/>
+    <schema id="14" parent="1" name="sys"/>
+    <schema id="15" parent="1" name="testdb"/>
+    <schema id="16" parent="1" name="world"/>
+  </database-model>
+</dataSource>
